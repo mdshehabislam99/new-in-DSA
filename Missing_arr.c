@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    int n, total;
 
-    printf("Enter  numbers: ");
+    printf("Enter  numbers: \n");
     scanf("%d", &n);
 
     int a[n - 1];
@@ -14,10 +14,8 @@ int main() {
         scanf("%d", &a[i]);
     }
 
-    // Sum of numbers from 1 to n
-    int total = n * (n + 1) / 2;
+    total = n * (n + 1) / 2;
 
-    // Subtract the numbers present in the array
     for (int i = 0; i < n - 1; i++) {
         total = total - a[i];
     }

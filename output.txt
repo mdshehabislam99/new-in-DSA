@@ -1,2 +1,3 @@
-Enter  numbers: Enter 3 elements:
-Missing number = -7
+Enter  numbers: 
+Enter 6 elements:
+Missing number = 3
