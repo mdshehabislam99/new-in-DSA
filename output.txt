@@ -1,0 +1,2 @@
+Enter  numbers: Enter 3 elements:
+Missing number = -7
