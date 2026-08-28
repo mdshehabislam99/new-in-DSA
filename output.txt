@@ -1,3 +1,3 @@
 Enter the number of elements: 
 Enter the elements: 
-Array after removing duplicates: 4 2 3 5 7 8 
+Repeated number: 4
