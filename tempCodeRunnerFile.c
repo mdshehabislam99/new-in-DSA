@@ -1,2 +1,2 @@
 
-    scanf("%d", &n);
+    printf("The elements of the 2D array are:\n");
