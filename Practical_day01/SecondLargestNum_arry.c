@@ -27,7 +27,7 @@ for(int i=1;i<n;i++){
         max2=a[i];
     }
 }
-printf("\nThe second biggest element is: %d",max2);
+printf("\nThe second Largest element is: %d",max2);
     return 0;
 
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int  n, biggest;
+    int  n, large_num;
     
 
     printf("Enter the size of array: ");
@@ -13,16 +13,18 @@ int main() {
         scanf("%d", &a[i]);
     }
 
-    biggest = a[0];
+    large_num = a[0];
 
 
     for (int i = 1; i < n; i++) {
-        if (a[i] > biggest) {
-            biggest = a[i];
+        if (a[i] > large_num
+) {
+            large_num
+     = a[i];
         }
     }
 
-    printf("\nBiggest number = %d", biggest);
+    printf("\nlarge number = %d", large_num);
 
     return 0;
 }

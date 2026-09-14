@@ -1,1 +1,3 @@
-
+Enter  numbers: 
+Enter 4 elements:
+Missing number = -1
