@@ -6,14 +6,23 @@ struct node
     struct node *next;
 };
 
-void Display(struct node *head)
+int isCyclic(struct node *head)
 {
-    struct node *p = head;
-    while (p != NULL)
+    struct node *slow = head;
+    struct node *fast = head;
+
+    while (fast != NULL && fast->next != NULL)
     {
-        printf("%d ", p->data);
-        p = p->next;
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast)
+        {
+            return 1; 
+        }
     }
+
+    return 0; 
 }
 
 int main()
@@ -43,7 +52,16 @@ int main()
             p = newnode;
         }
     }
-    Display(head);
+
+    int result = isCyclic(head);
+    if (result)
+    {
+        printf("The linked list is cyclic.\n");
+    }
+    else
+    {
+        printf("The linked list is not cyclic.\n");
+    }
 
     return 0;
 }

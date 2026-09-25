@@ -3,7 +3,7 @@
 struct node
 {
     int data;
-    struct node *link;
+    struct node *next;
 };
 
 int CountNodes(struct node *head)
@@ -13,7 +13,7 @@ int CountNodes(struct node *head)
     while (p != NULL)
     {
         count++;
-        p = p->link;
+        p = p->next;
     }
     return count;
 }
@@ -32,7 +32,7 @@ int main()
         newnode = (struct node *)malloc(sizeof(struct node));
         scanf("%d", &newnode->data);
 
-        newnode->link = NULL;
+        newnode->next = NULL;
 
         if (head == NULL)
         {
@@ -41,7 +41,7 @@ int main()
         }
         else
         {
-            p->link = newnode;
+            p->next = newnode;
             p = newnode;
         }
     }
