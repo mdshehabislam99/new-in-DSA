@@ -1,1 +1,2 @@
-Found
+Original List: 90 10 30 
+Sorted List: 10 30 90 
