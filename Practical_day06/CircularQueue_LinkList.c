@@ -82,7 +82,7 @@ int main()
     int n, value;
     scanf("%d", &n);
 
-    // Enqueue input
+    // Enqueue 
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &value);
