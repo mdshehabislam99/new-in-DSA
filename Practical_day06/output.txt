@@ -1,2 +1,2 @@
-Original List: 90 10 30 
-Sorted List: 10 30 90 
+4 3 2 1 
+-1
