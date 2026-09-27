@@ -20,7 +20,7 @@ class List{
         head =tail = NULL;
     }
 
-   void push_front(int val){
+   void push_front(int val){ //O(1)
    
     Node* newNode = new Node(val);//dynamic
    // Node newNode(val); //static allocation
@@ -34,7 +34,7 @@ class List{
     }
 }
 
-void push_back(int val){
+void push_back(int val){ //O(1)
     Node* newNode = new Node(val);
     if(head == NULL){
         head = tail = newNode;
@@ -46,7 +46,7 @@ void push_back(int val){
     }
 }
 
-void pop_front(){
+void pop_front(){ //O(n)
     if(head == NULL){
         cout<<"List is empty"<<endl;
         return;
@@ -57,7 +57,7 @@ void pop_front(){
     delete temp;
 }
 
-void pop_back(){
+void pop_back(){ //O(n)
 
     if(head == NULL){
 
@@ -75,7 +75,7 @@ void pop_back(){
 
 }
 
-void insert(int val, int pos){
+void insert(int val, int pos){ //O(n)
     if(pos < 0){
         cout<<"Invalid position"<<endl;
         return;
@@ -97,7 +97,7 @@ void insert(int val, int pos){
     temp->next = newNode;
 }
 
-void Print_LinkList(){
+void Print_LinkList(){//O(n)
     Node* temp = head;
     while(temp != NULL){
         cout<<temp->data<<" ";
@@ -106,7 +106,7 @@ void Print_LinkList(){
     cout<<endl;
 }
 
-int search(int key){
+int search(int key){ //O(n)
    Node* temp = head;
    int idx = -0;
 
