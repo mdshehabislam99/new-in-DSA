@@ -58,7 +58,7 @@ int main(){
     List l2;
     List result;
 
-    // Adding numbers to the first linked list
+    /
     l1.push_back(2);
     l1.push_back(4);
     l1.push_back(3);
