@@ -58,7 +58,6 @@ int main(){
     List l2;
     List result;
 
-    /
     l1.push_back(2);
     l1.push_back(4);
     l1.push_back(3);
@@ -68,27 +67,7 @@ int main(){
     l2.push_back(6);
     l2.push_back(4);
 
-    // Adding the two linked lists
-    Node* temp1 = l1.head;
-    Node* temp2 = l2.head;
 
-    while (temp1 != NULL || temp2 != NULL) {
-        int val1 = (temp1 != NULL) ? temp1->data : 0;
-        int val2 = (temp2 != NULL) ? temp2->data : 0;
-
-        result.addTwoNumbers(val1, val2);
-
-        if (temp1 != NULL) temp1 = temp1->next;
-        if (temp2 != NULL) temp2 = temp2->next;
-    }
-
-    // Printing the result linked list
-    Node* resultTemp = result.head;
-    while (resultTemp != NULL) {
-        cout << resultTemp->data << " ";
-        resultTemp = resultTemp->next;
-    }
-    cout << endl;
 
     return 0;
 }
