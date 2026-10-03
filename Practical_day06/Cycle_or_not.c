@@ -8,15 +8,15 @@ struct node
 
 int isCyclic(struct node *head)
 {
-    struct node *slow = head;
-    struct node *fast = head;
+    struct node *q = head;
+    struct node *p = head;
 
-    while (fast != NULL && fast->next != NULL)
+    while (p != NULL && p->next != NULL)
     {
-        slow = slow->next;
-        fast = fast->next->next;
+        q = q->next;
+        p = p->next->next;
 
-        if (slow == fast)
+        if (q == p)
         {
             return 1; 
         }
