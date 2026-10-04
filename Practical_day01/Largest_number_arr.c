@@ -1,21 +1,25 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 
-    int  n, largest;
+    int n, largest;
     scanf("%d", &n);
 
-     int a[n];
-    for (int i = 0; i < n; i++) {
+    int a[n];
+    for (int i = 0; i < n; i++)  //O(n)
+    {
         scanf("%d", &a[i]);
     }
 
     largest = a[0];
 
-    for (int i = 1; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
 
-        if (a[i] > largest) {
-            largest= a[i];
+        if (a[i] > largest)
+        {
+            largest = a[i];
         }
     }
 
