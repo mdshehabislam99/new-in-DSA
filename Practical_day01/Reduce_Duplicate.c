@@ -1,42 +1,49 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int Duplicate_reduce( int a[], int n) {
-    int k = 0;
+int Duplicate_reduce(int a[], int n)
+{
 
-    for (int i = 0; i < n; i++) {
-        int duplicate_found = 0;
-        for (int j = 0; j < k; j++) {
-            if (a[i] == a[j]) {
-                duplicate_found = 1;    
+    int new_arr = 0;
+    for (int i = 0; i < n; i++)
+    {
+
+        int flag = 0;
+
+        for (int j = 0; j < new_arr; j++)
+        {
+            if (a[i] == a[j])
+            {
+                flag = 1;
                 break;
             }
         }
-        if (!duplicate_found) {
-            a[k++] = a[i];
+        if (!flag)
+        {
+            a[new_arr] = a[i];
+            new_arr++;
         }
     }
 
-    return k;
+    return new_arr;
 }
-int main(){
+int main()
+{
 
     int n;
-    printf("Enter the number of elements: ");       
     scanf("%d", &n);
 
     int a[n];
-    printf("\nEnter the elements: \n");
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         scanf("%d", &a[i]);
     }
 
     int newSize = Duplicate_reduce(a, n);
 
-    printf("Array after removing duplicates: ");
-    for (int i = 0; i < newSize; i++) {
+    for (int i = 0; i < newSize; i++)
+    {
         printf("%d ", a[i]);
     }
-    printf("\n");
 
     return 0;
 }

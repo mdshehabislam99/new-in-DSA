@@ -1,16 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int n, total;//problem
-
-    printf("Enter  numbers: \n");
+    int n, total;
     scanf("%d", &n);
 
     int a[n - 1];
-
-    printf("Enter %d elements:\n", n - 1);
-
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < n - 1; i++) {//O(n)
         scanf("%d", &a[i]);
     }
 
