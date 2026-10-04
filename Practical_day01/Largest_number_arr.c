@@ -1,30 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int  n, large_num;
-    
 
-    printf("Enter the size of array: ");
+    int  n, largest;
     scanf("%d", &n);
 
      int a[n];
-    printf(" %d elements", n);
     for (int i = 0; i < n; i++) {
         scanf("%d", &a[i]);
     }
 
-    large_num = a[0];
-
+    largest = a[0];
 
     for (int i = 1; i < n; i++) {
-        if (a[i] > large_num
-) {
-            large_num
-     = a[i];
+
+        if (a[i] > largest) {
+            largest= a[i];
         }
     }
 
-    printf("\nlarge number = %d", large_num);
+    printf("largest number = %d", largest);
 
     return 0;
 }

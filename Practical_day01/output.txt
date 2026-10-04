@@ -1,3 +1,1 @@
-Enter  numbers: 
-Enter 4 elements:
-Missing number = -1
+largest number = 6
