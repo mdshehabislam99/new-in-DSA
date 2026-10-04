@@ -1,37 +1,43 @@
-#include<stdio.h>
+#include <stdio.h>
+int repeated_number(int a[], int n)
+{
 
+    int flag = 0;
 
-int repeated_number(int a[], int n) {
-   
-    int repeated = -1;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (a[i] == a[j]) {
-                repeated = a[i];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)//O(n^2)
+        {
+            if (a[i] == a[j])
+            {
+                flag = a[i];
                 break;
             }
         }
-        if (repeated != -1) {
+        if (flag != 0)
+        {
             break;
         }
     }
 
-    return repeated;
+    return flag;
 }
-int main(){
-int n;
-    printf("Enter the number of elements: ");       
+
+
+int main()
+{
+    int n;
+
     scanf("%d", &n);
 
     int a[n];
 
-    printf("\nEnter the elements: \n");
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         scanf("%d", &a[i]);
     }
     int result = repeated_number(a, n);
-  printf("Repeated number: %d\n", result);
+    printf("Repeated number: %d\n", result);
 
     return 0;
 }

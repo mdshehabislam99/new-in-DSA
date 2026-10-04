@@ -9,7 +9,7 @@ int Duplicate_reduce(int a[], int n)
 
         int flag = 0;
 
-        for (int j = 0; j < new_arr; j++)
+        for (int j = 0; j < new_arr; j++)//O(n^2)
         {
             if (a[i] == a[j])
             {
