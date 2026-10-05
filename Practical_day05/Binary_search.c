@@ -7,7 +7,7 @@ int binary_search(int arr[],int n, int target) {
     int end = n - 1;
 
     while (start <= end) {
-        int mid = (start + end) / 2;
+        int mid = start + (end - start) / 2;
 
         if (arr[mid] > target) {
             end = mid - 1;
@@ -39,3 +39,4 @@ int main() {
 
     return 0;
 }
+
