@@ -1,1 +1,1 @@
-Result = 15
+Element 8 found at index 4

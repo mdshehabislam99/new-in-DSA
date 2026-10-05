@@ -1,27 +1,24 @@
 #include<stdio.h>
+#include<stdlib.h>
 
-void binary_search(int arr[], int n, int target) {
-    int left = 0;
-    int right = n - 1;
-    int found = 0;
+int binary_search(int arr[],int n, int target) {
+    
+    int start = 0;
+    int end = n - 1;
 
-    while (left <= right) {
-        int mid = left + (right - left) / 2;
+    while (start <= end) {
+        int mid = (start + end) / 2;
 
-        if (arr[mid] == target) {
-            printf("Element %d found at index %d\n", target, mid);
-            found = 1;
-            break;
+        if (arr[mid] > target) {
+            end = mid - 1;
         } else if (arr[mid] < target) {
-            left = mid + 1;
+            start = mid + 1;
         } else {
-            right = mid - 1;
+            return mid;  // Target found at index mid
         }
     }
 
-    if (!found) {
-        printf("Element %d not found in the array\n", target);
-    }
+   return -1;
 }
 
 int main() {
@@ -33,7 +30,12 @@ int main() {
     }
     scanf("%d", &target);
 
-    binary_search(arr, n, target);
+    int result = binary_search(arr, n, target);
+    if (result != -1) {
+        printf("Element %d found at index %d\n", target, result);
+    } else {
+        printf("Element %d not found in the array\n", target);
+    }
 
     return 0;
 }
