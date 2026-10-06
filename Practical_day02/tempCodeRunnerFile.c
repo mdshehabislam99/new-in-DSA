@@ -1,2 +1,2 @@
 
-    printf("Enter k: ");
+    return x;

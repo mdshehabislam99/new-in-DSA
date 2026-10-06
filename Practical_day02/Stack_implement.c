@@ -3,12 +3,10 @@
 #define MAX 100
 
 int stack[MAX];
-
 int top = -1;
 
-void push(int x)
+void push(int x, int top_param, int stack[]) //O(1)
 {
-
     if (top == MAX - 1)
     {
         printf("Stack overflow\n");
@@ -18,9 +16,8 @@ void push(int x)
     stack[top] = x;
 }
 
-int pop()
+int pop(int top_param, int stack[])
 {
-
     if (top == -1)
     {
         printf("Stack underflow\n");
@@ -31,53 +28,14 @@ int pop()
     return x;
 }
 
-int peek()
-{
-
-    if (top == -1)
-    {
-        printf("Stack is empty\n");
-        return -1;
-    }
-    return stack[top];
-}
-
-int isEmpty()
-{
-
-    if (top == -1)
-    {
-        return 1;
-    }
-    return 0;
-}
-
-int isFull()
-{
-
-    if (top == MAX - 1)
-    {
-        return 1;
-    }
-    return 0;
-}
-
 int main()
 {
-
-    int n;
-    scanf("%d", &n);
-    for (int i = 0; i < n; i++)
-    {
-        int x;
-        scanf("%d", &x);
-        push(x);
-    }
-
-    while (!isEmpty())
-    {
-        printf("%d ", pop());
-    }
-
+    push(1, top, stack);
+    push(2, top, stack);
+    printf("%d\n", pop(top, stack));   // 2
+    push(3, top, stack);               // push AFTER pop
+    printf("%d\n", pop(top, stack));   // 3
+    printf("%d\n", pop(top, stack));   // 1
+    
     return 0;
 }
