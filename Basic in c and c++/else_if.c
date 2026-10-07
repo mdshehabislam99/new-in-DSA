@@ -36,7 +36,7 @@ int main(){
     }
     else
     {
-        printf("Invalid input. Please enter a number between 1 and 7.\n");
+        printf(" Please enter a number between 1 and 7.\n");
     }
 
 
