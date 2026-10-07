@@ -38,7 +38,6 @@ int main(){
     Solution s;
     ListNode* reversedHead = s.reverseList(head);
 
-    // Print the reversed linked list
     ListNode* temp = reversedHead;
     while (temp != NULL) {
         cout << temp->val << " ";
